@@ -18,4 +18,12 @@ console.log(/regular/i.test(str)) // true
 Задача №3. Найти текст в переменной и вывести в консоль
 
 let str = 'I learn JS. Regular expression'
-console.log(str.match(/regular/i))
+console.log(str.match(/regular/i)) // Regular
+
+
+
+Задача №4. Найти число, длина которого не более 5 знаков
+
+let str = '12345 123456 1234567'
+console.log(str.match(/\b\d{5}\b/g)) // 12345
+
