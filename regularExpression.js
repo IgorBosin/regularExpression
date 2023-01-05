@@ -7,7 +7,15 @@ hello@gmail.com
 ^\w+@\w+\.\w+
 
 
+  
 Задача №2. Найти текст в переменной (true/false)
 
 let str = 'I learn JS. Regular expression'
 console.log(/regular/i.test(str)) // true
+
+
+
+Задача №3. Найти текст в переменной и вывести в консоль
+
+let str = 'I learn JS. Regular expression'
+console.log(str.match(/regular/i))
