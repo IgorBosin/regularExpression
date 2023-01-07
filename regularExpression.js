@@ -38,7 +38,25 @@ console.log(str.match(/\b\d{5}\b/g)) // 12345
 Задача №6. Вывод количества символов без пробелов
 
 let whiteSpace = "Hi, I'm from Russia"
-console.log(whiteSpace.match(/\S/g).length); // 16
+console.log( whiteSpace.match(/\S/g).length ); // 16
+
+
+
+Задача №7. Упреждение (просмотр вперед)
+
+/Jack(?=Sprat)/ соответствует 'Jack' только если за ним следует 'Sprat'.
+
+Верно если состоит из 3-6 символов и одной цифры
+let password = "abc123";
+onsole.log( (/(?=\w{3,6})(?=\D*\d)/).test(password) );
+
+
+
+Верно если если длина строки более 5 символов И имеет 2 последовательные цифры
+let sampleWord = "bana12";
+console.log( (/(?=\w{5,})(?=\D+\d{2})/).test(sampleWord) );
+
+
 
 
 
