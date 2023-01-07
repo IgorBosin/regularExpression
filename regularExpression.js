@@ -38,7 +38,7 @@ console.log(str.match(/\b\d{5}\b/g)) // 12345
 Задача №6. Вывод количества символов без пробелов
 
 let whiteSpace = "Hi, I'm from Russia"
-console.log(whiteSpace.match(/\S/g).length);
+console.log(whiteSpace.match(/\S/g).length); // 16
 
 
 
