@@ -58,6 +58,13 @@ console.log( (/(?=\w{5,})(?=\D+\d{2})/).test(sampleWord) );
 
 
 
+Задача №7. Повтор n-го числа ровно 3 раза 
+
+let str1 = "42 42 42";
+let str2 = '42 42 42 42'
+console.log(/^(\d+) \1 \1$/.test(str1));
+console.log(/^(\d+) \1 \1$/.test(str2));
+
 
 
 
