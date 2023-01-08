@@ -46,15 +46,15 @@ console.log( whiteSpace.match(/\S/g).length ); // 16
 
 /Jack(?=Sprat)/ соответствует 'Jack' только если за ним следует 'Sprat'.
 
-Верно если состоит из 3-6 символов и одной цифры
+Верно если состоит из 3-6 символов и хотя бы одной цифры
 let password = "abc123";
-onsole.log( (/(?=\w{3,6})(?=\D*\d)/).test(password) );
+console.log( (/(?=\w{3,6})(?=\D*\d)/).test(password) ); // true
 
 
 
 Верно если если длина строки более 5 символов И имеет 2 последовательные цифры
 let sampleWord = "bana12";
-console.log( (/(?=\w{5,})(?=\D+\d{2})/).test(sampleWord) );
+console.log( (/(?=\w{5,})(?=\D+\d{2})/).test(sampleWord) ); //true
 
 
 
@@ -62,8 +62,8 @@ console.log( (/(?=\w{5,})(?=\D+\d{2})/).test(sampleWord) );
 
 let str1 = "42 42 42";
 let str2 = '42 42 42 42'
-console.log(/^(\d+) \1 \1$/.test(str1));
-console.log(/^(\d+) \1 \1$/.test(str2));
+console.log(/^(\d+) \1 \1$/.test(str1)); // true
+console.log(/^(\d+) \1 \1$/.test(str2)); // false
 
 
 
@@ -71,8 +71,15 @@ console.log(/^(\d+) \1 \1$/.test(str2));
 
 function validateUsr(username) {
   let res = /^[a-z0-9_]{4,16}$/
-  return res.test(username)
-    
+  return res.test(username)    
 }
-console.log(validateUsr('asd43 34'))
+console.log(validateUsr('asd43 34')) // false
 
+
+
+Задача №10. Вернуть true если текущий объект - цифра от 0 до 9
+
+String.prototype.digit = function() {
+  return /^[0-9]$/.test(this)
+}
+console.log('2'.digit()) // true
