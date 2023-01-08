@@ -111,3 +111,11 @@ function getNumberFromString(s) {
 }
 console.log(getNumberFromString("this is number: 7")) // 7
 
+
+
+Задача №13. Вернуть true если текст начинается с 1 или 2 или 3 (8 kyu validate code with simple regex)
+
+function validateCode (code) {
+ return /^[1,2,3]/.test(code)
+}
+console.log(validateCode(9453)) // false
