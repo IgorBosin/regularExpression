@@ -101,3 +101,13 @@ function isLockNessMonster(s) {
   return /tree fiddy|3.50|three fifty/.test(s)
 }
 console.log(isLockNessMonster(Your girlscout cookies are ready to ship. Your total comes to tree fiddy)) // true
+
+
+
+Задача №13. Убрать все буквы из текста и вернуть число(Number) (8 kyu Get number from string)
+
+function getNumberFromString(s) {
+    return +s.replace(/\D/g, '')
+}
+console.log(getNumberFromString("this is number: 7")) // 7
+
