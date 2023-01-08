@@ -113,9 +113,19 @@ console.log(getNumberFromString("this is number: 7")) // 7
 
 
 
-Задача №13. Вернуть true если текст начинается с 1 или 2 или 3 (8 kyu validate code with simple regex)
+Задача №14. Вернуть true если текст начинается с 1 или 2 или 3 (8 kyu validate code with simple regex)
 
 function validateCode (code) {
  return /^[1,2,3]/.test(code)
 }
 console.log(validateCode(9453)) // false
+
+
+
+Задача №15. Вернуть количество строчных символов (8 kyu Regex count lowercase letters)
+
+function lowercaseCount(str){
+    if (str.match(/[a-z]/g) == null) return 0 // когда будет принимать пустую строку даст null
+    else {return str.match(/[a-z]/g).join('').length}
+}
+console.log(lowercaseCount("wedw"))
