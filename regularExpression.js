@@ -128,4 +128,11 @@ function lowercaseCount(str){
     if (str.match(/[a-z]/g) == null) return 0 // когда будет принимать пустую строку даст null
     else {return str.match(/[a-z]/g).join('').length}
 }
-console.log(lowercaseCount("wedw"))
+console.log(lowercaseCount("wedw")) // 4
+
+
+
+function lowercaseCount(str){
+    return (str.match(/[a-z]/g) || []).length
+}
+console.log(lowercaseCount("wedw")) // 4
