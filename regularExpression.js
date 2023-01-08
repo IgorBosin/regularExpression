@@ -67,7 +67,7 @@ console.log(/^(\d+) \1 \1$/.test(str2)); // false
 
 
 
-Задача №9. Вернуть true если никнейм содержит только буквы и цифры и _
+Задача №9. Вернуть true если никнейм содержит только буквы и цифры и _ (8 kyu Simple validation of a username with regex)
 
 function validateUsr(username) {
   let res = /^[a-z0-9_]{4,16}$/
@@ -77,7 +77,7 @@ console.log(validateUsr('asd43 34')) // false
 
 
 
-Задача №10. Вернуть true если текущий объект - цифра от 0 до 9
+Задача №10. Вернуть true если текущий объект - цифра от 0 до 9 (8 kyu Regexp Basics - is it a digit?)
 
 String.prototype.digit = function() {
   return /^[0-9]$/.test(this)
@@ -86,9 +86,18 @@ console.log('2'.digit()) // true
 
 
 
-Задача №11. Удалить из полученного текста все цифры
+Задача №11. Удалить из полученного текста все цифры (8 kyu String cleaning)
 
 function stringClean(s){
     return s.replace(/\d/g, '')
 }
 console.log(stringClean('E3at m2e2!!')) // Eat me!!
+
+
+
+Задача №12. Вернуть true текст содержит определенные фразы (8 kyu A Strange Trip to the Market)
+
+function isLockNessMonster(s) {
+  return /tree fiddy|3.50|three fifty/.test(s)
+}
+console.log(isLockNessMonster(Your girlscout cookies are ready to ship. Your total comes to tree fiddy)) // true
