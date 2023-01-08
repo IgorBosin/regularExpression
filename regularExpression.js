@@ -58,7 +58,7 @@ console.log( (/(?=\w{5,})(?=\D+\d{2})/).test(sampleWord) );
 
 
 
-Задача №7. Повтор n-го числа ровно 3 раза 
+Задача №8. Повтор n-го числа ровно 3 раза 
 
 let str1 = "42 42 42";
 let str2 = '42 42 42 42'
@@ -67,5 +67,12 @@ console.log(/^(\d+) \1 \1$/.test(str2));
 
 
 
+Задача №9. Вернуть true если никнейм содержит только буквы и цифры и _
 
+function validateUsr(username) {
+  let res = /^[a-z0-9_]{4,16}$/
+  return res.test(username)
+    
+}
+console.log(validateUsr('asd43 34'))
 
