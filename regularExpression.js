@@ -83,3 +83,12 @@ String.prototype.digit = function() {
   return /^[0-9]$/.test(this)
 }
 console.log('2'.digit()) // true
+
+
+
+Задача №11. Удалить из полученного текста все цифры
+
+function stringClean(s){
+    return s.replace(/\d/g, '')
+}
+console.log(stringClean('E3at m2e2!!')) // Eat me!!
